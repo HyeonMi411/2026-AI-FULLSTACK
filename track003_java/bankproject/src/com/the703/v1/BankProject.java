@@ -21,6 +21,7 @@ public class BankProject {
 			System.out.println("비밀번호 입력 : "); pass = scanner.nextInt();
 			System.out.println("나이 입력 : "); age = scanner.nextInt();
 			System.out.println("잔액 입력 : "); bank = scanner.nextInt();
+			System.out.println("계좌를 삭제하시겠습니까");
 					break;
 			
 		}

@@ -5,7 +5,7 @@ public class Casting001 {
 	public static void main(String[] args) {
 		//1. 자료형 ( 기본형 / 참조형 )
 		//2. 기본형 - boolean - true/false
-		//			정수형	: byte 1 < short 2 < int★ 4 < long 8L
+		//			정수형	: byte 1 < short 2 char 2 < int★ 4 < long 8L
 		//			실수형	: float 4f < double★ 8
 		//3. #1.형변환 - 자동타입변환 (boolean 빼고)
 		byte  by = 1; short sh = 2; int   in = 4; long  lo = 8L;
