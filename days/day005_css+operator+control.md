@@ -69,7 +69,7 @@ css 적용방법
 11. 요소에 1px 실선 테두리를 추가하는 속성은?  border: 1px solid #e1306c;
 12. 모서리를 둥글게 10px로 만드는 속성은?  border-radius:10px
 13. 그림자 효과를 추가하는 속성은?  box-shadow: 0 0 10px rgba(255, 163, 163, 0.5);
-14. 천천히 움직이는 장면전환효과를 주는 속성은? hover
+14. 천천히 움직이는 장면전환효과를 주는 속성은? trasition: all 2s;
 
 > 정리문제 (2)
 15.  가로 사이즈 지정가능한것은 block v  /    inline
