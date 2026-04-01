@@ -106,23 +106,38 @@ css 적용방법
 
 
 > 정리문제 (3)
+
 1.  연산자의 우선순위를 적으시오.
+
 먼저    값                       비교            조건             대입
+
 ()      ++ -- + - * / %         > < != ==       &&  ||  ?:      =
 
 2.  다음오류 해결
+
 short sh1 = 1 , sh2=2;
+
 short result = sh1 + sh2;
+
 short result = (short) (sh1 +sh2);
 
 3. 필수조건
+
 int x=5; char ch='\u0000';
+
 q1-1 int형 변수 x가 3보다 크고 10보다 작을때 true인 조건식 
+
   x > 3     &&   x < 10   
+
 q1-2 char형 변수 ch가 'a' 또는 'A'일때   true인 조건식    
+
  ch == 'a'  ||  ch == 'A' 
+
 q1-3 char형 변수 ch가 숫자('0'~'9')일때   true인 조건식     
+
  ch >= '0'  &&  ch <= '9' 
+
 q1-4 char형 변수 ch가 영문자(대문자 또는 소문자) 일때   true인 조건식
+
  ch >= 'A'  &&  ch <= 'Z'  ||  ch >= 'a'  &&  ch <= 'z' 
 
