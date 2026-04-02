@@ -14,8 +14,7 @@ public class IfEx007 {
 		// 만약	* 라면 10*3=30
 		// 만약	/ 라면 10/3=3.33
 		Scanner scanner = new Scanner(System.in);
-		int  num1=0, num2=0; 
-		double value=0;
+		int  num1=0, num2=0, value=0;		
 		char ch = '\u0000'; 
 		System.out.print("정수를 하나 입력 > "); num1 = scanner.nextInt();
 		System.out.print("정수를 하나 입력 > "); num2 = scanner.nextInt();
