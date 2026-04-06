@@ -9,8 +9,13 @@ public class BankProjectV1 {
 		int id = -1, pass=-1, balance=-1;
 		Scanner scanner = new Scanner(System.in);
 		// 입력
+		
+		System.out.print("ID 입력 > "); id = scanner.nextInt();
+		System.out.print("PASS 입력 > "); pass = scanner.nextInt();
+		System.out.print("금액 입력 > "); balance = scanner.nextInt();
+		
 		for (;;) {			
-			System.out.println("🌟💰 WELCOME TO BANK SYSTEM 💰🌟\n"					
+			System.out.print("🌟💰 WELCOME TO BANK SYSTEM 💰🌟\n"
 					+ "[1] ➕ 계좌 추가\n"
 					+ "[2] 🔍 계좌 조회\n"
 					+ "[3] 💵 입금하기\n"
@@ -21,42 +26,75 @@ public class BankProjectV1 {
 			num = scanner.nextInt();
 
 //			System.out.println("나이 입력 : ");
-//			age = scanner.nextInt();
-			
-			System.out.println("ID 입력 > "); id = scanner.nextInt();
-			System.out.println("PASS 입력 > "); pass = scanner.nextInt();
-			System.out.println("금액 입력 > "); balance = scanner.nextInt();
+//			age = scanner.nextInt();			
 
 			// 처리 + 출력
+			
+			if (num == 9) { // [9] ⊙ 종료
+				break;				
+			}
 			if (num == 1) {
 				System.out.println("추가기능입니다.");
 				//입력	id = -1, pass=-1, balance;
 				//					[1]ID	입력 > std111
 				//					[2]PASS	입력 > 11
 				//					[3]금액	입력 > 1b
-				System.out.println("ID 입력 > "); id = scanner.nextInt();
-				System.out.println("PASS 입력 > "); pass = scanner.nextInt();
-				System.out.println("금액 입력 > "); balance = scanner.nextInt();
+				int tid = -1, tpass = -1, tbalance = -1;
+				System.out.print("ID 입력 > "); tid = scanner.nextInt();
+				System.out.print("PASS 입력 > "); tpass = scanner.nextInt();
+				System.out.print("금액 입력 > "); tbalance = scanner.nextInt();
 				
-				System.out.println("잔액은 "+balance+"입니다.");
+				tbalance = balance + tbalance;		
+				
+				System.out.println();				
+				System.out.println("ID는 " + tid + " PASS는 " + tpass + " 잔액은 " + tbalance);
+				System.out.println();
+				
 			} else if (num == 2) {
-				System.out.println("조회기능입니다.");
+				System.out.print("조회기능입니다.");
 				// 변수
 				int tid=-1, tpass=-1;
 				// 입력 ( 임시공간에 아이디와 비번입력받기 )
 				//					[1]ID	입력 > std111
 				//					[2]PASS	입력 > 11
-				System.out.println("ID 입력 > "); tid = scanner.nextInt();
-				System.out.println("PASS 입력 > "); tpass = scanner.nextInt();
+				System.out.print("ID 입력 > "); tid = scanner.nextInt();
+				System.out.print("PASS 입력 > "); tpass = scanner.nextInt();
 				// 처리 + 출력
+				
+				System.out.println();				
 				if ( id == tid && pass == tpass ) {System.out.printf("금액은 "+balance+"입니다.\n");}
 				else		   					  {System.out.println("비밀번호를 확인해주세요!");}
+				System.out.println();
 				//	9번째 줄에 있는 아이디와 임시아이디가 같고, 9번째 줄에 있는 비번과 임시 비번이 같으면 정보출력
 				// 아니라면 비밀번호를 확인해주세요!
 			} else if (num == 3) {
 				System.out.println("입금기능입니다.");
+				
+				int tid = -1, tpass = -1, tbalance = -1;
+				System.out.print("ID 입력 > "); tid = scanner.nextInt();
+				System.out.print("PASS 입력 > "); tpass = scanner.nextInt();
+				System.out.print("금액 입력 > "); tbalance = scanner.nextInt();
+				
+				tbalance = balance + tbalance;		
+				
+				System.out.println();				
+				System.out.println("ID는 " + tid + " PASS는 " + tpass + " 잔액은 " + tbalance);
+				System.out.println();
+				
 			} else if (num == 4) {
 				System.out.println("출금기능입니다.");
+				
+				int tid = -1, tpass = -1, tbalance = -1;
+				System.out.print("ID 입력 > "); tid = scanner.nextInt();
+				System.out.print("PASS 입력 > "); tpass = scanner.nextInt();
+				System.out.print("금액 입력 > "); tbalance = scanner.nextInt();
+				
+				tbalance = balance - tbalance;		
+				
+				System.out.println();				
+				System.out.println("ID는 " + tid + " PASS는 " + tpass + " 잔액은 " + tbalance);
+				System.out.println();
+								
 			} else if (num == 5) {
 				System.out.println("삭제기능입니다.");
 			} else if (num == 9) {
@@ -67,6 +105,7 @@ public class BankProjectV1 {
 		}
 	}
 }
+
 /*
 Q1. 메뉴판나오게 만들고 사용자가 메뉴 선택시
       1을 입력하면 추가기능입니다. 출력구문까지만

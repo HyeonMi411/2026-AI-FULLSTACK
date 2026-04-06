@@ -15,14 +15,6 @@ public class ForInfinit {
 		Scanner scanner = new Scanner(System.in);
 		//int a = -1;
 		
-//		for(;;)		
-//		{ 
-//			System.out.println("Hello"); 
-//			System.out.println("빠져나오실래요? 0이면 종료");
-//			a = scanner.nextInt();
-//			if(a==0) break;
-//		}
-		
 		//2. 빠져나올조건	
 		int a = -1;
 		
