@@ -2,35 +2,56 @@ package com.the703.basic006_ex;
 
 import java.util.Scanner;
 
-public class ForIn001_1 {
+public class ForIn001_3_ {
 	public static void main(String[] args) {
 		// 변수
+		// 자료형 : 기본형/참조형 (String)
+		// 기본형 - 정수: byte(1)<short/char(2)<int★(4)<long(8) / 실수 : float(4)<double★(8) / boolean 빼고 타입형변환가능
 		Scanner scanner = new Scanner(System.in);
-		int kor=-1, eng=-1, mat=-1, total=-1;
-		String stdid="", pass="", level="", jang="";
+		int kor=-1, eng=-1, mat=-1, total=-1;	/* ■1) 0~100사이의 아닌값	*/
+		String stdid="", pass="불합격", level="가", jang="";
 		double avg=-1;
 		
 		// 입력
 		System.out.print("학번 입력 > "); stdid = scanner.next();
 		
-		for(;;) {
-			System.out.print("국어점수 입력 > "); kor = scanner.nextInt();
-			if( kor>=0 && kor<=100 ) { break; }
-			else { System.out.println("다시입력해주세요."); }			
+		for(;;) {	//5) 여기와서
+			if( !(kor>=0 && kor<=100) ) {	//■2) kor = -1 초기값 입력받을 수 있음 
+				System.out.print("국어점수 입력 > "); kor = scanner.nextInt();	//3)
+				continue;	//4) 이아래코드들 진행안함
+			}
+			
+			if( !(eng>=0 && eng<=100) ) {
+				System.out.print("영어점수 입력 > "); eng = scanner.nextInt();
+				continue;				
+			}
+			
+			if( !(mat>=0 && mat<=100) ) {
+				System.out.print("수학점수 입력 > "); mat = scanner.nextInt();
+				continue;				
+			}
+		
+			break;
 		}
 		
-		for(;;) {	
-			System.out.print("영어점수 입력 > "); eng = scanner.nextInt();
-			if( eng>=0 && eng<=100 ) { break; }			
-			else { System.out.println("다시입력해주세요."); }
-		}
-		
-		for(;;) {
-			System.out.print("수학점수 입력 > "); mat = scanner.nextInt();
-			if( mat>=0 && mat<=100 ) { break; }			
-			else { System.out.println("다시입력해주세요."); }
-		}
-		
+//		for(;;) {	//5) 여기와서
+//			if( kor<0 || kor>100 ) {	//■2) kor = -1 초기값 입력받을 수 있음 
+//				System.out.print("국어점수 입력 > "); kor = scanner.nextInt();	//3)
+//				continue;	//4) 이아래코드들 진행안함
+//			}
+//			
+//			if( eng<0 || eng>100 ) {
+//				System.out.print("영어점수 입력 > "); eng = scanner.nextInt();
+//				continue;				
+//			}
+//			
+//			if( mat<0 || mat>100 ) {
+//				System.out.print("수학점수 입력 > "); mat = scanner.nextInt();
+//				continue;				
+//			}
+//			
+//			break;	// kor, eng, math 입력을 잘한경우
+//		}
 		// 처리
 		total = kor + eng + mat;
 		avg = total/3.0;

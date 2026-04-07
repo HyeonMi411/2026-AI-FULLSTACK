@@ -1,5 +1,7 @@
 package com.the703.basic005_ex;
 
+import java.util.Scanner;
+
 public class IfEx001_2 {
 
 	public static void main(String[] args) {

@@ -12,6 +12,9 @@ public class ForIn001_2 {
 		
 		// 입력
 		System.out.print("학번 입력 > "); stdid = scanner.next(); 			
+		System.out.print("국어점수 입력 > "); kor = scanner.nextInt();
+		System.out.print("영어점수 입력 > "); eng = scanner.nextInt();		 			
+		System.out.print("수학점수 입력 > "); mat = scanner.nextInt();		 			
 		
 		/*
 		 * 
@@ -37,16 +40,17 @@ public class ForIn001_2 {
 		 */			 
 		 	
 		 	for(;;){	//무한반복
-		 		if( kor<0 && kor>100 ){	//-1	(0~100 사이가 아니므로)		 			
-		 			System.out.print("국어점수 입력 > "); kor = scanner.nextInt();
-		 			continue;
-		 		}
-		 
+		 		if( kor>=0 && kor<=100 ){	//-1	(0~100 사이가 아니므로)
+		 			continue;		 			
+		 		}else {
+		 			System.out.print("국어점수 입력 > "); kor = scanner.nextInt();		 			
+		 		} 
+		 			
 		 		if( eng<0 && eng>100 ){
 		 			System.out.print("영어점수 입력 > "); eng = scanner.nextInt();		 			
 		 			continue;
 		 		}
-		 
+		 		
 		 		if( mat<0 && mat>100 ){
 		 			System.out.print("수학점수 입력 > "); mat = scanner.nextInt();		 			
 		 			continue;
@@ -78,8 +82,10 @@ public class ForIn001_2 {
 		
 		pass = avg<60?"불합격" 
 				: kor >=40 && eng>=40 && mat>=40 ? "합격":"불합격";
+				
+		jang = avg >=95 ? "장학생" : ""; 
 		
-		if(avg >=95) { jang="장학생"; }
+//		if(avg >=95) { jang="장학생"; }
 		
 		level = avg >= 90 ? "수"
 			:	avg >= 90 ? "우"

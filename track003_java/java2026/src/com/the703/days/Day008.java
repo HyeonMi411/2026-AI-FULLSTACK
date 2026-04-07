@@ -49,7 +49,7 @@ public class Day008 {
 		/*============================================================*/		
 				
 		total = kor + eng + mat;
-		avg = total/3;
+		avg = total/3.0;
 		
 //		pass=avg<60"불합격"; ? avg <= 60	&&	kor >= 40	&&	eng >= 40 &&	mat >= 40 : pass="합격"; 
 		
@@ -57,7 +57,9 @@ public class Day008 {
 			 { pass="합격";	}
 		else { pass="불합격"; }
 		
-		if(avg >=95) { jang="장학생"; }
+		jang = avg >=95 ? "장학생" : ""; 
+		
+//		if(avg >=95) { jang="장학생"; }
 		
 		level = avg >= 90 ? "수"
 			:	avg >= 90 ? "우"
@@ -67,7 +69,7 @@ public class Day008 {
 		System.out.println("====================================================================");
 		System.out.println("학번\t국어\t영어\t수학\t총점\t평균\t합격여부\t레벨\t장학생");
 		System.out.println("====================================================================");
-		System.out.printf("%s\t%d\t%d\t%d\t%d\t%f\t%s\t%s\t%s"
+		System.out.printf("%s\t%d\t%d\t%d\t%d\t%.2f\t%s\t%s\t%s"
 				,stdid,kor,eng,mat,total,avg,pass,level,jang);		
 		
 

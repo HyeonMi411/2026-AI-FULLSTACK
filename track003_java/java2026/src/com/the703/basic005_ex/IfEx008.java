@@ -25,7 +25,9 @@ public class IfEx008 {
 //		pass = avg<60?"불합격" : kor <40 || eng<40 || mat<40 ? "불합격":"합격";
 		pass = avg<60?"불합격" : kor >=40 && eng>=40 && math>=40 ? "합격":"불합격";
 		
-		if( avg >= 95 ) { jang="장학생"; }		
+		jang = avg>=95?"장학생":"";
+		
+//		if( avg >= 95 ) { jang="장학생"; }		
 		
 //			 if( avg >= 90 ) { level="수"; }
 //		else if( avg >= 80 ) {  level="우";  }
