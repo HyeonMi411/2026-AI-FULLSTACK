@@ -2,7 +2,7 @@ package com.the703.basic006_ex;
 
 import java.util.Scanner;
 
-public class RepeatEx005 {
+public class RepeatEx005_2 {
 	public static void main(String[] args) {
 		
 		Scanner scanner = new Scanner(System.in);		
