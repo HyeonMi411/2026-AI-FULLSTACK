@@ -20,6 +20,11 @@
         .f1{float:left;  background-color: #3afea3;}
         .f2{float:right; background-color: #ffb8f1;}
         .f3{clear:both}
+
+
+        .p{ position:relative; }
+        .me{ position:absolute; bottom: 0; right: 10px}
+
     </style>
 </head>
 <body>
@@ -48,6 +53,19 @@
         <p class="item f2" >RIGHT<span>(오른쪽)</span></p>
         <P class="item f3" >float속성끊기-clear:both / overflow:hidden </P>
     </div>
+
+    <div class="container p">
+        <h3>4. 배치(2) - position- relative(누구안에) + absolute(어디) 좌표</h3>
+        <p class="item me">WHERE I AM</p>
+        <p>종류 : static(기본값) , relative(박스 위치o) , 
+            absolute(박스 위치x) , fixed(브라우저고정) , 
+            sticky(스크롤할때 특점지정에 붙기)
+        </p>
+        <p>부모 : relaive(공간확보) / 자식 : (원하는 위치 배치) - 좌표</p>
+    </div>
+
+
+
 
     
 </body>
