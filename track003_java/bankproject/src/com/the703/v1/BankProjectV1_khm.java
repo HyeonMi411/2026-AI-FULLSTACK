@@ -2,26 +2,23 @@ package com.the703.v1;
 
 import java.util.Scanner;
 
-public class BankProjectV1 {
+public class BankProjectV1_khm {
 	public static void main(String[] args) {
 		// 변수
 		int menu = -1;
 		int id = -1, pass = -1, balance = -1;
 		Scanner scanner = new Scanner(System.in);
-
-		// 입력 // 처리 // 출력
-		// for( ;menu!=9; ) {
+		// 입력
 		while (menu != 9) {
-			System.out.println(id + "\t" + pass + "\t" + balance); // 계좌의 1명분
-			System.out.print("\n\n🌟💰 WELCOME TO BANK SYSTEM 💰🌟\r\n" + "[1] ➕ 계좌 추가\n" + "[2] 🔍 계좌 조회\n"
-					+ "[3] 💵 입금하기\n" + "[4] 💸 출금하기\n" + "[5] 🗑️ 계좌 삭제\n" + "[9] ⊙ 종료\r\n" + "👉 번호를 선택하세요: \n");
+			System.out.print("🌟💰 WELCOME TO BANK SYSTEM 💰🌟\n" + "[1] ➕ 계좌 추가\n" + "[2] 🔍 계좌 조회\n" + "[3] 💵 입금하기\n"
+					+ "[4] 💸 출금하기\n" + "[5] 🗑️ 계좌 삭제\n" + "[9] ⊙ 종료\n" + "👉 번호를 선택하세요: \n");
 			menu = scanner.nextInt();
 
 			// 처리 + 출력
 
 			if (menu == 9) { // [9] ⊙ 종료
-				System.out.println("프로그램을 종료합니다.\n");
-//				break;
+				System.out.println("[9] 종료합니다.\n");
+				break;
 			} else if (menu == 1) {
 
 				System.out.println("[1] ➕ 계좌 추가 \n");
@@ -32,52 +29,123 @@ public class BankProjectV1 {
 				pass = scanner.nextInt();
 				System.out.print("금액 입력 > \n");
 				balance = scanner.nextInt();
-				// 처리 x 출력 x
+
 				System.out.println();
 
 				System.out.printf("ID는 %d, PASS는 %d, 잔액은, %d 입니다.\n", id, pass, balance);
 				System.out.println();
 
-			} else if (menu >= 2 && menu <= 5) {
-//			 	2-1. 사용자가 맞는지 여부
-				int tempid = -1, temppass = -1;
-				System.out.print("ID 입력 > \n");
-				tempid = scanner.nextInt();
-				System.out.print("PASS 입력 > \n");
-				temppass = scanner.nextInt();
-				if (id != tempid || pass != temppass) {
-					System.out.println("정보확인해주세요.");
-					continue;
-				} // 아이디 다르거나 비번이 다르다면
+			}
 
-//				2-2. 조회면 조회기능, 입력이면 사용자에게 입력받아서 입금, 출금이면 출금금액받아서 출금, 계좌삭제라면 y,n 입력받아서 계좌삭제
+			else {
 
 				switch (menu) {
+
 				case 2:
-					System.out.printf("ID : %d\nPASS: %d\nBALANCE: %d\n", id, pass, balance);
-					break;
-				case 3:
-					System.out.print("입금할 금액 > ");
-					balance += scanner.nextInt();
-					break;
-				case 4:
-					System.out.print("출금할 금액 > ");
-					int tempbalance = scanner.nextInt();					
-					System.out.print(tempbalance > balance ? "잔액부족! 출금불가" : "출금완료! 현재잔액 : " + (balance -= tempbalance));
-					break;
-				case 5:
-					System.out.print("계좌삭제 (Y/N) > ");
-					char again = scanner.next().charAt(0);
-					if (again == 'Y' || again == 'y') {
-						id = -1;
-						pass = -1;
-						;
-						balance = -1;
+
+					System.out.println("조회기능입니다.\n");
+					// 변수
+					int tid = -1, tpass = -1;
+
+					System.out.print("ID 입력 > \n");
+					tid = scanner.nextInt();
+					System.out.print("PASS 입력 > \n");
+					tpass = scanner.nextInt();
+					if (id != tid && pass != tpass) {
+						System.out.println("비밀번호를 확인해주세요!\n");
+						continue;
 					}
+					// 처리 + 출력
+
+					System.out.println();
+
+					if (id == tid && pass == tpass) {
+						System.out.printf("금액은 %d 입니다.\n", balance);
+					} else {
+						System.out.println("비밀번호를 확인해주세요!\n");
+					}
+					System.out.println();
 					break;
+
+				case 3:
+					System.out.println("입금기능입니다.\n");
+
+					int tid1 = -1, tpass1 = -1, tbalance = -1;
+					System.out.print("ID 입력 > \n");
+					tid1 = scanner.nextInt();
+					System.out.print("PASS 입력 > \n");
+					tpass1 = scanner.nextInt();
+					System.out.print("금액 입력 > \n");
+					tbalance = scanner.nextInt();
+
+					balance += tbalance;
+
+					System.out.println();
+
+					if (id == tid1 && pass == tpass1) {
+						System.out.printf("ID는 %d, PASS는 %d, 금액은 %d 입니다.\n", id, pass, balance);
+					} else {
+						System.out.println("비밀번호를 확인해주세요!\n");
+					}
+					System.out.println();
+					break;
+
+				case 4:
+
+					System.out.println("출금기능입니다.\n");
+
+					int tid2 = -1, tpass2 = -1, tbalance1 = -1;
+					System.out.print("ID 입력 > \n");
+					tid2 = scanner.nextInt();
+					System.out.print("PASS 입력 > \n");
+					tpass2 = scanner.nextInt();
+					System.out.print("금액 입력 > \n");
+					tbalance1 = scanner.nextInt();
+
+					balance -= tbalance1;
+
+					System.out.println();
+
+					if (balance <= 0) {
+						System.out.println("잔액이 부족합니다!\n");
+					} else if (id == tid2 && pass == tpass2) {
+						System.out.printf("ID는 %d, PASS는 %d, 금액은 %d 입니다.\n", id, pass, balance);
+					} else {
+						System.out.println("비밀번호를 확인해주세요!\n");
+					}
+
+					System.out.println();
+					break;
+
+				case 5:
+					System.out.println("삭제기능입니다.\n");
+
+					int tid3 = -1, tpass3 = -1, tbalance2 = -1;
+					char tdelete = '\u0000';
+					System.out.print("ID 입력 > \n");
+					tid3 = scanner.nextInt();
+					System.out.print("PASS 입력 > \n");
+					tpass3 = scanner.nextInt();
+					if (id != tid3 && pass != tpass3) {
+						System.out.println("비밀번호를 확인해주세요!\n");
+						continue;
+					}
+					System.out.print("계좌를 삭제하겠습니까? Y, N로 입력해주세요. > \n");
+					tdelete = scanner.next().charAt(0);
+
+					System.out.println();
+
+					if (id == tid3 && pass == tpass3 && tdelete == 'Y' && tdelete == 'y') {
+						System.out.println("ID와 PASS를 삭제합니다.\n");
+					}
+
+					System.out.println();
+					break;
+
 				}
 			}
-		} // end while
+		}
+
 	}
 }
 /*
