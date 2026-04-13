@@ -26,17 +26,14 @@ public class BankProjectV1 {
 
 				System.out.println("[1] ➕ 계좌 추가 \n");
 
-				System.out.print("ID 입력 > \n");
-				id = scanner.nextInt();
-				System.out.print("PASS 입력 > \n");
-				pass = scanner.nextInt();
-				System.out.print("금액 입력 > \n");
-				balance = scanner.nextInt();
+				System.out.print("ID 입력 > \n"); id = scanner.nextInt();
+				System.out.print("PASS 입력 > \n"); pass = scanner.nextInt();
+				System.out.print("금액 입력 > \n"); balance = scanner.nextInt();
 				// 처리 x 출력 x
-				System.out.println();
-
-				System.out.printf("ID는 %d, PASS는 %d, 잔액은, %d 입니다.\n", id, pass, balance);
-				System.out.println();
+//				System.out.println();
+//
+//				System.out.printf("ID는 %d, PASS는 %d, 잔액은, %d 입니다.\n", id, pass, balance);
+//				System.out.println();
 
 			} else if (menu >= 2 && menu <= 5) {
 //			 	2-1. 사용자가 맞는지 여부
