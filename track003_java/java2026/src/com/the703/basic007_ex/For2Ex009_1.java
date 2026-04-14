@@ -1,11 +1,11 @@
 package com.the703.basic007_ex;
 
-public class For2Ex009 { // start class
+public class For2Ex009_1 { // start class
 	public static void main(String[] args) { // start main
 		
 		// 이중 for
 		for(char ch2='A'; ch2<='Z'; ch2++) {
-			for(char ch='A'; ch<=ch2; ch++) { System.out.print(ch); } 
+			for(char ch='A'; ch<=ch2; ch++) { System.out.print(ch<=ch2 ?ch:' '); } 
 			System.out.println();
 		}	
 		
@@ -14,7 +14,7 @@ public class For2Ex009 { // start class
 		char ch2='A';
 		while( ch2<='Z' ) {
 			char ch='A';
-			while( ch<=ch2 ) { System.out.print(ch); ch++; } 
+			while( ch<=ch2 ) { System.out.print(ch<=ch2 ?ch:' '); ch++; } 
 			System.out.println();
 			ch2++;
 		}	
@@ -24,7 +24,7 @@ public class For2Ex009 { // start class
 		char ch3='A';
 		do{
 			char ch='A';
-			do{ System.out.print(ch); ch++; }while( ch<=ch3 ); 
+			do{ System.out.print(ch<=ch3 ?ch:' '); ch++; }while( ch<=ch3 ); 
 			System.out.println();
 			ch3++;
 		}while( ch3<='Z' );	

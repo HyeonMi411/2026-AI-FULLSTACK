@@ -8,14 +8,14 @@ public class ArrayNewEx002 {
 		char [] arr = new char[5];
 		char data='A';
 		//입력
-		//ver-1	arr[0]='A';	arr[1]='B';	arr2[2]='C';	arr2[3]='D';	arr2[4]='E';
+		//ver-1		arr[0]='A';  arr[1]='B';  arr[2]='C';  arr[3]='D';  arr[4]='E';
 		//ver-2
-		//		arr[0]=data++;	/*	data('A') 대입 ;빠져나와서 증가(B)*/
-		//		arr[1]=data++;	/*	data('B') 대입 ;빠져나와서 증가(C)*/		
-		for(int i=0; i<arr.length; i++){arr[i] = data++;}
+		//		arr[0]=data++;  /* data('A') 대입 ;빠져나와서 증가(B)*/
+		//		arr[1]=data++;  /* data('B') 대입 ;빠져나와서 증가(C)*/
+		for(int i=0; i<arr.length; i++){ arr[i]=data++; }
 		//처리
 		//출력
-		for(int i=0; i<arr.length; i++){	System.out.printf("%c\t" , arr[i]);	}		
+		for(int i=0; i<arr.length; i++){   System.out.printf("%c\t" , arr[i]);}	
 			
 	}
 }
