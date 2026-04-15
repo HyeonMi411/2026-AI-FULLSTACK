@@ -21,18 +21,29 @@ public class Array2Ex004 {
 		
 		int[][] result = new int[datas.length+1][datas[0].length+1];    
 		int total=0;  double avg=0.0;
+		int ch=0, kan=0; 
 		
 		
 //		result[0][4]=datas[0][0]+datas[0][1]+datas[0][2]+datas[0][3];
 //		result[1][4]=datas[0][0]+datas[0][1]+datas[0][2]+datas[0][3];
 //		result[2][4]=datas[0][0]+datas[0][1]+datas[0][2]+datas[0][3];
 		
-		for(int ch=0; ch<datas.length; ch++) {
-			for(int kan=0; kan<datas[0].length; kan++) {
-				result[ch][4]+=datas[ch][kan];
+		for(ch=0; ch<datas.length+1; ch++) {
+			for(kan=0; kan<datas[ch].length+1; kan++) {
+				if(kan==4) { result[ch][kan]+=datas[ch][kan]; }
+				if(kan!=4) { result[ch][kan]=datas[ch][kan]; }				
 			}
-//			System.out.printf("%d\n" , result[0][4]);			
+			System.out.println();
 		}
+		System.out.printf("%d\t" , result[ch][kan]);			
+//		System.out.printf("%d\n" , result[0][4]);			
+		
+//		for(int ch=0; ch<datas.length; ch++) {
+//			for(int kan=0; kan<datas[ch].length+1; kan++) {
+//				result[3][kan]+=datas[ch][kan];
+//			}
+//		}
+		
 		
 		/*
 		
