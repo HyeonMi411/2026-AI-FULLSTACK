@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>김현미 포트폴리오</title>
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="./css/my.css" rel="stylesheet">
+</head>
+<body>
+     <!-- HEADER -->
+     <!-- Q1. h1 내용바꾸고 / a태그에들어가 있는 Logo / nav 좋아하는 색상으로 바꾸기 -->
+     <header>
+      <h1 class="myhidden">HYEONMI PORTFOLIO</h1>      
+      <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+        <h2 class="myhidden">주메뉴</h2>
+        <div class="container-fluid">
+          <a class="navbar-brand" href="javascript:void(0)">FULLSTACK DEVELOPER HM</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="mynavbar">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="javascript:void(0)">포트폴리오</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="javascript:void(0)">About Me</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="javascript:void(0)">Gallery</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="javascript:void(0)">Contact</a>
+              </li>
+            </ul>
+<!--          <form class="d-flex">
+              <input class="form-control me-2" type="text" placeholder="Search">
+              <button class="btn btn-primary" type="button">Search</button>
+            </form> -->
+          </div>
+        </div>
+      </nav>
+     </header>
+        
+     <!-- VISUAL -->
+     <section>
+      <h3 class="myhidden">홍보</h3>      
+      <!-- Carousel -->
+      <div id="demo" class="carousel slide" data-bs-ride="carousel">
+        
+
+        <!-- Indicators/dots -->
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+        </div>
+
+        <!-- The slideshow/carousel -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./img/portfolio1.jpg" alt="Los Angeles" class="d-block w-25">
+          </div>
+          <div class="carousel-item">
+            <img src="./img/portfolio2.jpg" alt="Chicago" class="d-block w-25">
+          </div>
+          <div class="carousel-item">
+            <img src="./img/portfolio3.jpg" alt="New York" class="d-block w-25">
+          </div>
+        </div>
+
+        <!-- Left and right controls/icons -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>      
+     </section>
+        
+     <!-- INFO -->
+     <section class="bg-info">      
+      <div class="container">
+        <h3 style="text-align: center;">About Me</h3>
+        <div>
+          <div class="col-sm-4">1</div>
+          <div class="col-sm-4">2</div>
+          <div class="col-sm-4">3</div>
+        </div>
+      </div>
+      
+
+
+
+
+
+      
+      <div>
+
+        <div>        
+          <p>
+            <img src="./img/one.png" alt="내 사진" style="width: 170px;">
+          </p>
+          <p>
+            <h4>Kim Hyeon Mi</h4>
+            <ul>
+              <li>jewelkhm@naver.com</li>
+              <li>
+                <a href="https://github.com/HyeonMi411/2026-AI-FULLSTACK.git" 
+                title="깃허브 포트폴리오" target="_blank">깃허브 포트폴리오</a></li>
+            </ul>        
+          </p>
+        </div>
+
+        <div>
+          <p>
+            <h4>Education</h4>
+            <ul>
+              <li>MSA기반 플러터(Dart)활용 자바(JAVA)프론트앤드 백엔트 풀스택 웹(앱)개발 (25.08.25 ~ 26.02.27)</li>
+            </ul>
+            <h4></h4>
+          </p>
+
+        </div>
+        <div>
+
+        </div>          
+
+
+
+
+      </div>    
+     </section>
+        
+     <!-- PORTFOLIO -->
+     <section>
+      <h3>Portfolio</h3>
+     </section>
+        
+     <!-- CONTACT -->
+     <section>
+      <h3>Contact Me</h3>
+     </section>
+        
+     <!-- POOTER -->
+     <footer>
+
+     </footer>    
+</body>
+</html>

@@ -1,29 +1,30 @@
 package com.the703.basic007_ex;
 
 public class For2Ex011 {
-	public static void main(String[] args) {
-		
+	public static void main(String[] args) {		
+				
 		// 이중 for
 		int i=0, ch=0;
 		int hap=0, hap2=0;
-//		for(ch=1; ch<=10; ch++) {
-			for(i=1; i<=10; i++) {			
-				System.out.print( (i==1 ? "":"+") + i );
-				hap+=i;
+		for(ch=0; ch<10; ch++) {
+			for(i=((ch*10)+1); i<=((ch+1)*10); i++) {			
+				System.out.print( (i==((ch*10)+1) ? "":"+") + i );
+				hap+=(i+10);
+//				hap+=((ch+1)*10);				
+//				hap+=((((ch*10)+1)*10)+1);
 			}
-			System.out.print( "=" + hap );
+			System.out.print( "=" + hap );						
 			System.out.println();
 			
-			for(i=1; i<=10; i++) {			
-				System.out.print( (i==1 ? "":"+") + i );
-				hap+=i;
-			}
-			System.out.print( "=" + hap );
-			System.out.println();
+//			for(i=11; i<=20; i++) {			
+//				System.out.print( (i==11 ? "":"+") + i );
+//				hap+=i;
+//			}
+//			System.out.print( "=" + hap );
+//			System.out.println();
 			
 
-//			i+=10;			
-//		}		
+		}		
 
 	}
 }
