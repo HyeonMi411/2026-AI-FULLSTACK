@@ -6,7 +6,7 @@ public class MethodEx006 {
 
 	public static void main(String[] args) {
 		
-		int a=0; b=0; c=0;
+		int a=0, b=0, c=0;
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("숫자1>"); a = scanner.nextInt();
 		System.out.println("숫자2>"); b = scanner.nextInt();
@@ -20,7 +20,7 @@ public class MethodEx006 {
 		//a랑 b랑 비교 해서 큰 값을 c랑 비교한다.
 		int max=-99999;
 		if(a<b) { max = b;}
-		else if(max<c){ max = c;}
+		if(max<c){ max = c;}
 		return max;
 		
 //		int [] su = {-3, -5, -1, -9, -7} ;		
