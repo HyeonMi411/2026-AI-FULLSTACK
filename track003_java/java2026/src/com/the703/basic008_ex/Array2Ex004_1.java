@@ -1,6 +1,6 @@
 package com.the703.basic008_ex;
 
-public class Array2Ex004 {
+public class Array2Ex004_1 {
 	public static void main(String[] args) {
 
 //		#1. result 에 datas데이터 복사하기
@@ -22,27 +22,20 @@ public class Array2Ex004 {
 		int[][] result = new int[datas.length+1][datas[0].length+1];    
 		int total=0;  double avg=0.0;
 		int ch=0, kan=0; 
-				
+		
+		
 //		result[0][4]=datas[0][0]+datas[0][1]+datas[0][2]+datas[0][3];
 //		result[1][4]=datas[1][0]+datas[1][1]+datas[1][2]+datas[1][3];
 //		result[2][4]=datas[2][0]+datas[2][1]+datas[2][2]+datas[2][3];
 		
-//		for(ch=0; ch<datas.length+1; ch++) {
-			for(kan=0; kan<datas[0].length+1; kan++) {
-					 if(kan==datas[0].length+1) { result[0][kan]+=datas[0][kan]; }
-				else if(kan!=datas[0].length+1) { result[0][kan]=datas[0][kan]; }				
+		for(ch=0; ch<datas.length+1; ch++) {
+			for(kan=0; kan<datas[ch].length+1; kan++) {
+					 if(kan==4) { result[ch][kan]+=datas[ch][kan]; }
+				else if(kan!=4) { result[ch][kan]=datas[ch][kan]; }				
 			}
-//		}
-			System.out.printf("%d\t" , result[0][kan]);			
+			System.out.printf("%d\t" , result[ch][kan]);			
 			System.out.println();
-//		for(ch=0; ch<datas.length+1; ch++) {
-//			for(kan=0; kan<datas[ch].length+1; kan++) {
-//				if(kan==4) { result[ch][kan]+=datas[ch][kan]; }
-//				else if(kan!=4) { result[ch][kan]=datas[ch][kan]; }				
-//			}
-//			System.out.printf("%d\t" , result[ch][kan]);			
-//			System.out.println();
-//		}
+		}
 //		System.out.printf("%d\n" , result[0][4]);			
 		
 //		for(int ch=0; ch<datas.length; ch++) {
