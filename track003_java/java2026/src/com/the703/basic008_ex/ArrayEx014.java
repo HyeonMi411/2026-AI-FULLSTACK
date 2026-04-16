@@ -12,7 +12,8 @@ public class ArrayEx014 {
 		int[] rank=new int[5];
 		String[] pass=new String[5];
 		String[] jang=new String[5];		
-		int[] stars=new int[5];		
+		int[] stars=new int[5];	
+		String[] result=new String[5];		// ■
 		
 		// 평균 구하기 
 		for(int i=0; i<name.length; i++) {
@@ -40,39 +41,54 @@ public class ArrayEx014 {
 //			System.out.printf("%s\n" , jang[i] );
 		}
 		
-		// 랭킹 구하기 		
-		for(int i=0; i<name.length; i++) {
-			stars[i] = avg[i]/10;	
-//			System.out.printf("%d\n" , stars[i]);					
-		}	
+		// 랭킹 구하기
+//		public static String process_star(double avg) {
+//		String result="";
+//		
+//		for(int i=0; i<avg/10; i++) {result+="*";}
+//		
+//		
+//		return result;
+//		} 	
 		
+		for(int i=0; i<avg/10; i++) {
+			result[i]+="★";
+//			System.out.printf("%s\n" , result[i] );
+		}
+		
+		
+		
+		
+		
+		//========================================================================================
+		
+		// 랭킹 구하기 		
+//		for(int i=0; i<name.length; i++) {
+//			stars[i] = avg[i]/10;	
+//			System.out.printf("%d\n" , stars[i]);					
+//		}
+//		
+//		
 //		for(int ch=0; ch<name.length; ch++) {
 //			for(int i=0; i<stars[ch]; i++) {
 //				System.out.printf("%s" , '★');
 //			}			
 //			System.out.println();				
-//		}		
-				
-		System.out.println("이름\t국어\t영어\t수학\t평균\t등수\t합격여부\t장학생\t랭킹");
-		for(int i=0; i<name.length; i++) {
-			System.out.printf("%s\t%d\t%d\t%d\t%d\t%d\t%s\t%s\t%s\n"
-					,name[i],kor[i],eng[i],mat[i],avg[i],rank[i]+1,pass[i],jang[i],
-					
-					'★'
-							
-							
-							);			
-		}
+//		}
+//		
+//				
+//		System.out.println("이름\t국어\t영어\t수학\t평균\t등수\t합격여부\t장학생\t랭킹");
+//		for(int i=0; i<name.length; i++) {
+//			System.out.printf("%s\t%d\t%d\t%d\t%d\t%d\t%s\t%s\t%s\n"
+//					,name[i],kor[i],eng[i],mat[i],avg[i],rank[i]+1,pass[i],jang[i],
+//					
+//					'★'
+//							
+//							
+//							);			
+//		}
 		
-		for(int ch=0; ch<name.length; ch++) {
-			for(int i=0; i<stars[ch]; i++) {
-				System.out.printf("%s" , '★');
-			}			
-			System.out.println();				
-		}
-
 	}
-
 }
 /*
 이름		국어		영어		수학		평균		등수		합격여부	장학생	랭킹

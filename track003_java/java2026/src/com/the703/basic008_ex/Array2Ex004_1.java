@@ -36,6 +36,18 @@ public class Array2Ex004_1 {
 			System.out.printf("%d\t" , result[ch][kan]);			
 			System.out.println();
 		}
+		
+
+//		for(ch=0; ch<datas.length+1; ch++) {
+//		for(kan=0; kan<datas[ch].length+1; kan++) {
+//				 if(kan==datas[ch].length+1) { result[ch][kan]+=datas[ch][kan]; }
+//			else if(kan!=datas[ch].length+1) { result[ch][kan]=datas[ch][kan]; }
+//			else if(ch==datas.length+1) { result[ch][kan]=datas[ch][kan]; }
+//				 System.out.print(result[ch][kan]);
+//		}
+//		System.out.println();
+//	}		
+		
 //		System.out.printf("%d\n" , result[0][4]);			
 		
 //		for(int ch=0; ch<datas.length; ch++) {
@@ -43,6 +55,7 @@ public class Array2Ex004_1 {
 //				result[3][kan]+=datas[ch][kan];
 //			}
 //		}
+
 		
 		
 		/*
