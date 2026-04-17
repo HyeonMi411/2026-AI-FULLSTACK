@@ -33,6 +33,14 @@ public class Bank_v3_김현미 {
 	}
 	
 	public static void bank_find() {
+		for (int i = 0; i < id.length; i++) {
+			if (balance[i] == 0) {
+				find = i;
+				break;
+			}
+		}
+		
+		if (find == -1) { System.out.println("가입불가!"); continue; }
 		
 	}
 	
@@ -83,19 +91,8 @@ public class Bank_v3_김현미 {
 			} else if (menu == 1) {
 
 				System.out.println("[1] ➕ 계좌 추가 \n");
+				bank_find();
 
-
-
-
-
-				for (int i = 0; i < id.length; i++) {
-					if (balance[i] == 0) {
-						find = i;
-						break;
-					}
-				}
-				
-				if (find == -1) { System.out.println("가입불가!"); continue; }
 
 				System.out.print("ID 입력 > \n");
 				id[find] = scanner.next();
@@ -103,12 +100,6 @@ public class Bank_v3_김현미 {
 				pass[find] = scanner.next();
 				System.out.print("금액 입력 > \n");
 				balance[find] = scanner.nextDouble();
-
-
-
-
-
-				// ========================================================================
 
 			} else if (menu >= 2 && menu <= 5) {
 //			 	2-1. 사용자가 맞는지 여부
@@ -118,15 +109,6 @@ public class Bank_v3_김현미 {
 				System.out.print("PASS 입력 > \n");
 				temppass = scanner.next();
 
-				// id[0]이 입력받은 tempid랑 다르거나 pass[0]이 입력받은 temppass랑 다르면 정보확인해주세요 출력후 한번 skip 함
-				// if(id[0]이 입력받은 tempid랑 다르거나 pass[0]이 입력받은 temppass랑 다르면){ 정보확인해주세요 출력}후 한번
-				// skip 함
-				// if( !(id[0]이 입력받은 tempid랑 같아야하고 pass[0]이 입력받은 temppass랑 같으면) ){ 정보확인해주세요 출력}후
-				// 한번 skip 함
-				// if( !(id[0]이 입력받은 tempid랑 같아야하고 pass[0]이 입력받은 temppass랑 같으면) ){ 정보확인해주세요 출력}후
-				// 한번 skip 함
-
-//				for(int i=0; i<id.length; i++) {
 				if (!(id[find].equals(tempid) && pass[find].equals(temppass))) {
 //						if (!id[find].equals(tempid) || !pass[find].equals(temppass) ) {
 					System.out.println("정보확인해주세요.");
@@ -158,8 +140,7 @@ public class Bank_v3_김현미 {
 						balance[find] = -1;
 					}
 					break;
-				} // end switch
-//				} // end for 
+				} // end switch				
 			} // end else if
 		} // end while
 	}
