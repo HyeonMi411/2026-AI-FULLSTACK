@@ -87,16 +87,7 @@ public class MethodEx004 {
 			String result="";
 			
 			for(int i=0; i<avg/10; i++) {result+="*";}
-			
-			//		for(int i=0; i<=avg/10; i++) { return "*"; }
-			//			
-			//			for(int i=0; i<=10; i++) {
-			//				if(avg/10==10){ return "*"; }
-			//				else if(avg/10==9) { return "*********";  }
-			//				else if(avg/10==8) { return "********";   }
-			//				else if(avg/10==7) { return "********";   }
-			//				else               { return ""; 		  }			
-			//			}
+	
 			return result;
 		} 
 	
