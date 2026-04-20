@@ -12,14 +12,11 @@ class Student001{
 		System.out.println("촘점 : " + (kor + eng + math));
 		System.out.printf( "평균 : %.2f" , (kor + eng + math)/3.0);
 	}		
-}
-		
+}		
 public class ClassEx001{
 	public static void main(String[] args) {
 		Student001   s1 = new Student001();	//1) new 번지, 객체생성 2) 생성자-초기화 3) s1주소
 		s1.name="first";  s1.no=11; s1.kor=100; s1.eng=100; s1.math=99;
-//		s1.total=s1.kor+s1.eng+s1.math;
-//		s1.avg=s1.total/3.0;
 		s1.info();		
 	}
 }
@@ -59,4 +56,6 @@ public class ClassEx001{
   평균 : 99.67
   
 //	void info() { System.out.printf("이름 : %s\n총점 : %d\n평균 : %.2f", name, total, avg);}
+//		s1.total=s1.kor+s1.eng+s1.math;
+//		s1.avg=s1.total/3.0;
 */
