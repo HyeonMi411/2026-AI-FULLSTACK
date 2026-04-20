@@ -40,32 +40,57 @@ public class Bank_v3_김현미 {
 			}
 		}
 		
-		if (find == -1) { System.out.println("가입불가!"); continue; }
+//		if (find == -1) { System.out.println("가입불가!"); continue; }
 		
 	}
 	
 	public static void bank_aut() {
+//			 	2-1. 사용자가 맞는지 여부
+		String tempid = "", temppass = "";
+		System.out.print("ID 입력 > \n");
+		tempid = scanner.next();
+		System.out.print("PASS 입력 > \n");
+		temppass = scanner.next();
 		
+		if (!(id[find].equals(tempid) && pass[find].equals(temppass))) {
+			//if (!id[find].equals(tempid) || !pass[find].equals(temppass) ) {
+			System.out.println("정보확인해주세요.");
+		} // 아이디 다르거나 비번이 다르다면		
 	}
 	
-	public static void bank_add(String id, double balance) {
-		
+	public static void bank_add() {
+		System.out.print("ID 입력 > \n");
+		id[find] = scanner.next();
+		System.out.print("PASS 입력 > \n");
+		pass[find] = scanner.next();
+		System.out.print("금액 입력 > \n");
+		balance[find] = scanner.nextDouble();		
 	}
 	
-	public static void bank_che(String[] args) {
-		
+	public static void bank_che() {
+		System.out.printf("ID : %s\nPASS: %s\nBALANCE: %f\n", id[find], pass[find], balance[find]);
 	}
 	
-	public static void bank_dep(String[] args) {
-		
+	public static void bank_dep() {
+		System.out.print("입금할 금액 > ");
+		balance[find] += scanner.nextInt();		
 	}
 	
-	public static void bank_wit(String[] args) {
-		
+	public static void bank_wit() {
+		System.out.print("출금할 금액 > ");
+		int tempbalance = scanner.nextInt();
+		System.out.print(tempbalance > balance[find] ? "잔액부족! 출금불가"
+				: "출금완료! 현재잔액 : " + (balance[find] -= tempbalance));		
 	}
 	
-	public static void bank_del(String[] args) {
-		
+	public static void bank_del() {
+		System.out.print("계좌삭제 (Y/N) > ");
+		char again = scanner.next().charAt(0);
+		if (again == 'Y' || again == 'y') {
+			id[find] = "";
+			pass[find] = "";
+			balance[find] = -1;
+		}		
 	}
 	
 	public static void bank_end() {
@@ -92,53 +117,29 @@ public class Bank_v3_김현미 {
 
 				System.out.println("[1] ➕ 계좌 추가 \n");
 				bank_find();
-
-
-				System.out.print("ID 입력 > \n");
-				id[find] = scanner.next();
-				System.out.print("PASS 입력 > \n");
-				pass[find] = scanner.next();
-				System.out.print("금액 입력 > \n");
-				balance[find] = scanner.nextDouble();
+				
+				bank_add();
 
 			} else if (menu >= 2 && menu <= 5) {
-//			 	2-1. 사용자가 맞는지 여부
-				String tempid = "", temppass = "";
-				System.out.print("ID 입력 > \n");
-				tempid = scanner.next();
-				System.out.print("PASS 입력 > \n");
-				temppass = scanner.next();
 
-				if (!(id[find].equals(tempid) && pass[find].equals(temppass))) {
-//						if (!id[find].equals(tempid) || !pass[find].equals(temppass) ) {
-					System.out.println("정보확인해주세요.");
-					continue;
-				} // 아이디 다르거나 비번이 다르다면
+				bank_aut();
+//				continue;
+				
 
 //					2-2. 조회면 조회기능, 입력이면 사용자에게 입력받아서 입금, 출금이면 출금금액받아서 출금, 계좌삭제라면 y,n 입력받아서 계좌삭제
 
 				switch (menu) {
 				case 2:
-					System.out.printf("ID : %s\nPASS: %s\nBALANCE: %f\n", id[find], pass[find], balance[find]);
+					bank_che();
 					break;
 				case 3:
-					System.out.print("입금할 금액 > ");
-					balance[find] += scanner.nextInt();
+					bank_dep();
 					break;
 				case 4:
-					System.out.print("출금할 금액 > ");
-					int tempbalance = scanner.nextInt();
-					System.out.print(tempbalance > balance[find] ? "잔액부족! 출금불가"
-							: "출금완료! 현재잔액 : " + (balance[find] -= tempbalance));
+					bank_wit();
 					break;
 				case 5:
-					System.out.print("계좌삭제 (Y/N) > ");
-					char again = scanner.next().charAt(0);
-					if (again == 'Y' || again == 'y') {
-						id[find] = "";
-						pass[find] = "";
-						balance[find] = -1;
-					}
+					bank_del();
 					break;
 				} // end switch				
 			} // end else if

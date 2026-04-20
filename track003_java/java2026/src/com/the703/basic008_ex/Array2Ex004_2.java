@@ -23,24 +23,11 @@ public class Array2Ex004_2 {
 		int total=0;  double avg=0.0;
 //		int ch=0, kan=0; 
 				
-//		result[0][4]=datas[0][0]+datas[0][1]+datas[0][2]+datas[0][3];
-//		result[1][4]=datas[1][0]+datas[1][1]+datas[1][2]+datas[1][3];
-//		result[2][4]=datas[2][0]+datas[2][1]+datas[2][2]+datas[2][3];
+
 		
-		for(int ch=0; ch<datas.length; ch++) {
-			for(int kan=0; kan<datas[ch].length; kan++) {
-				result[ch][kan]=datas[ch][kan];			
-			}		
-			System.out.println();
-		}
+
 		
-		for(int ch=0; ch<datas.length+1; ch++) {
-			for(int kan=0; kan<datas[ch].length+1; kan++) {
-				if(kan==datas[ch].length) { result[ch][kan]+=datas[ch][kan]; }
-				if(ch==datas.length) { result[ch][kan]+=datas[ch][kan]; }							
-			}		
-			System.out.println();
-		}
+
 		
 		for(int ch=0; ch<datas.length+1; ch++) {
 			for(int kan=0; kan<datas[ch].length+1; kan++) {							

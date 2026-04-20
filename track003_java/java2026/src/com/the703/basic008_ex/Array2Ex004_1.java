@@ -24,63 +24,18 @@ public class Array2Ex004_1 {
 		int ch=0, kan=0; 
 		
 		
-//		result[0][4]=datas[0][0]+datas[0][1]+datas[0][2]+datas[0][3];
-//		result[1][4]=datas[1][0]+datas[1][1]+datas[1][2]+datas[1][3];
-//		result[2][4]=datas[2][0]+datas[2][1]+datas[2][2]+datas[2][3];
+
 		
-		for(ch=0; ch<datas.length+1; ch++) {
-			for(kan=0; kan<datas[ch].length+1; kan++) {
-					 if(kan==4) { result[ch][kan]+=datas[ch][kan]; }
-				else if(kan!=4) { result[ch][kan]=datas[ch][kan]; }				
-			}
-			System.out.printf("%d\t" , result[ch][kan]);			
-			System.out.println();
-		}
 		
 
-//		for(ch=0; ch<datas.length+1; ch++) {
-//		for(kan=0; kan<datas[ch].length+1; kan++) {
-//				 if(kan==datas[ch].length+1) { result[ch][kan]+=datas[ch][kan]; }
-//			else if(kan!=datas[ch].length+1) { result[ch][kan]=datas[ch][kan]; }
-//			else if(ch==datas.length+1) { result[ch][kan]=datas[ch][kan]; }
-//				 System.out.print(result[ch][kan]);
-//		}
-//		System.out.println();
-//	}		
-		
-//		System.out.printf("%d\n" , result[0][4]);			
-		
-//		for(int ch=0; ch<datas.length; ch++) {
-//			for(int kan=0; kan<datas[ch].length+1; kan++) {
-//				result[3][kan]+=datas[ch][kan];
-//			}
-//		}
 
 		
 		
 		/*
 		
-		for(int ch=0; ch<datas.length; ch++) {
-			for(int kan=0; kan<datas[0].length; kan++) {
-				result[ch][4]+=datas[ch][kan];
-			}
-//			System.out.printf("%d\n" , result[0][4]);			
-		}
-				
-		for(int ch=0; ch<datas.length; ch++) {
-			for(int kan=0; kan<datas[0].length+1; kan++) {
-				result[3][kan]+=datas[ch][kan];
-			}			
-		}
-//		System.out.print(result[3][4]);			
-//		System.out.printf("%d\t" , result[3][0]);			
-		
-		for(int ch=0; ch<datas.length+1; ch++) {
-			for(int kan=0; kan<datas[ch].length+1; kan++) {				
-				System.out.printf("%d\t" , result[ch][kan]);			
-			}			
-		}
-//		System.out.print(result[3][4]);			
+
+	
+
 		
 				
 		
@@ -96,28 +51,12 @@ public class Array2Ex004_1 {
 		
 //		System.out.println(total);
 		
+	
 		
+
 		
-		for(int ch=0; ch<datas.length+1; ch++){	
-			for(int kan=0; kan< datas[ch].length+1; kan++)	
-			{	result[ch][5] = datas[kan];		}
-			
-			System.out.println();			
-		}
-		
-		for(int ch=0; ch<datas.length+1; ch++){	
-			for(int kan=0; kan< datas[ch].length+1; kan++)	
-			{	result[ch][kan] = total[ch];		}
-			
-			System.out.println();			
-		}		
-		
-		for(int ch=0; ch<datas.length+1; ch++){	
-			for(int kan=0; kan< datas[ch].length+1; kan++)
-			{	System.out.print(result[ch][kan]+"\t");	}
-			
-			System.out.println();			
-		}		
+
+	
 		
 		avg = total/12.0;
 		System.out.printf("%f" , avg);
