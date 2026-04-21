@@ -51,7 +51,7 @@ public class ArrayEx014 {
 			for(int i=0; i<stars[ch]; i++) {
 				result[ch]+="★";
 			}			
-			System.out.println();				
+//			System.out.println();				
 		}
 		
 //		for(int ch=0; ch<name.length; ch++) {

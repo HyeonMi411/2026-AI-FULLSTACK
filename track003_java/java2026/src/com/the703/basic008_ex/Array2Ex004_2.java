@@ -21,43 +21,101 @@ public class Array2Ex004_2 {
 		
 		int[][] result = new int[datas.length+1][datas[0].length+1];    
 		int total=0;  double avg=0.0;
-//		int ch=0, kan=0; 
+		int ch=0, kan=0; 
+		
+		
+
+		
+		
+
+
+		
+		
+		/*
+		
+
+	
+
+		
 				
-
 		
-
-		
-
-		
-		for(int ch=0; ch<datas.length+1; ch++) {
-			for(int kan=0; kan<datas[ch].length+1; kan++) {							
-				System.out.println(result[ch][kan]);
-			}		
-			System.out.println();
-		}
-		
-				
-		int [][] arr21 = new int[2][3];	
-
-		int data=10;
-		for(int ch=0; ch<arr21.length; ch++) {	//1) 배열명.length	몇층
-			for (int kan = 0; kan < arr21[ch].length; kan++) {	//2) 배열명[0].length		아파트0층.칸
-				arr21[ch][kan] = data;
-				data += 10;
+		for(int ch=0; ch<datas.length; ch++){	
+			for(int kan=0; kan< datas[ch].length+1; kan++){
+				total+=datas[ch][kan-1];
+				result[ch][4] = total;
 			}
-			//3) 끝나고 해야할일
-			System.out.println();
+			System.out.printf("%d\t" , result[ch][5]);		
+			
+			System.out.println();			
 		}
-				
-		for(int ch=0; ch<arr21.length; ch++) {	// 배열의 층수 
-			for(int kan=0; kan<arr21[ch].length; kan++) {	// 배열[층]의 칸수
-				System.out.print(	arr21[ch][kan] + "\t");				
-			}
-			//2-3 한층이 끝나면 해야할일
-			System.out.println();
-		}
+		
+//		System.out.println(total);
+		
+	
+		
 
 		
+
+	
+		
+		avg = total/12.0;
+		System.out.printf("%f" , avg);
+
+	*/	
+		
+		
+		
+//		for(int ch=0; ch<datas.length+1; ch++){	
+//			for(int kan=0; kan< datas[ch].length+1; kan++){
+//				total+=datas[ch][kan];
+//			}
+//			
+//			System.out.println();			
+//		}
+		
+//		System.out.printf("총점은 : %d\n" , total);
+//		System.out.printf("평균은 : %.1f" , avg);
+		
+//		double [] arr = new double[5];
+//		double data=1.1;
+//		//arr[0] = 1.1;  
+//		//		arr[0] = data;   /* 1.1넣고*/ data+=0.1;  /* 0.1증가*/
+//		//		arr[1] = data;   /* 1.2넣고*/ data+=0.1;  /* 0.1증가*/
+//		//		arr[2] = data;   /* 1.3넣고*/ data+=0.1;  /* 0.1증가*/
+//		//		arr[3] = data;   /* 1.4넣고*/ data+=0.1;  /* 0.1증가*/
+//		//		arr[4] = data;   /* 1.5넣고*/ data+=0.1;  /* 0.1증가*/
+//		
+//		for(int i=0; i<arr.length; i++) {  arr[i] = data;    data+=0.1;         }
+//		for(int i=0; i<arr.length; i++) { System.out.printf("%.1f\t" , arr[i] );}				
+		
+		
+//		int[][] arr = {
+//				{ 1, 1, 1,},
+//				{ 2, 2, 2,},
+//				{ 3, 3, 3,},
+//				{ 4, 4, 4,},
+//		};
+//		int total=0;  double avg=0.0;
+//		
+
+//				
+//		for(int ch=0; ch<arr.length; ch++){	
+//			for(int kan=0; kan< arr[ch].length; kan++){
+//				total+=arr[ch][kan];
+//			}
+//			
+//			System.out.println();			
+//		}
+//		for(int ch=0; ch<arr.length; ch++){	
+//			for(int kan=0; kan< arr[ch].length; kan++){
+//				total+=arr[ch][kan];
+//			}
+//			
+//			System.out.println();			
+//		}
+//		avg = total/12.0;
+//		System.out.printf("총점은 : %d\n" , total);
+//		System.out.printf("평균은 : %.1f" , avg);		
 		
 
 	}

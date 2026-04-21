@@ -61,7 +61,7 @@ public class Bank_v3_김현미_2 {
 		
 	}
 	
-	public static void bank_add() {
+	public static void bank_add(int find) {
 		System.out.print("ID 입력 > \n");
 		id[find] = scanner.next();
 		System.out.print("PASS 입력 > \n");
@@ -107,7 +107,7 @@ public class Bank_v3_김현미_2 {
 	public static void main(String[] args) {
 		//////////////////########### 주어진옵션
 		int menu = -1;
-		int find = -1;
+		int find = -2;
 		
 		// for( ;menu!=9; ) {
 		while (menu != 9) {
@@ -127,7 +127,7 @@ public class Bank_v3_김현미_2 {
 				bank_find();  //★ 
 				
 			   	if (find == -1) { System.out.println("가입불가!");   continue; }
-				bank_add();   //★
+				bank_add(find);   //★
 
 			} else if (menu >= 2 && menu <= 5) { 
 				bank_aut();  //★
@@ -140,16 +140,12 @@ public class Bank_v3_김현미_2 {
 				switch (menu) {
 				case 2:
 					bank_che();
-					break;
 				case 3:
 					bank_dep();
-					break;
 				case 4:
 					bank_wit();
-					break;
 				case 5:
 					bank_del();
-					break;
 				} // end switch				
 			} // end else if
 		} // end while

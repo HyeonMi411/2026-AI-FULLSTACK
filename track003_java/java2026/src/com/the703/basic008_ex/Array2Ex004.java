@@ -17,7 +17,7 @@ public class Array2Ex004 {
 
 		int[][] result = new int[datas.length+1][datas[0].length+1];    
 
-		// #1. result 에 datas데이터 복사하기
+		// #1. result 에 datas데이터 복사하기		
 		
 		for(int ch=0; ch<datas.length; ch++) {
 			for(int kan=0; kan<datas[0].length; kan++) {
@@ -25,7 +25,7 @@ public class Array2Ex004 {
 				//System.out.printf( "%d\t" , result[ch][kan] );
 			}			
 			System.out.println();
-		}	
+		}
 		
 		// #2. 가로방향누적데이터
 		
