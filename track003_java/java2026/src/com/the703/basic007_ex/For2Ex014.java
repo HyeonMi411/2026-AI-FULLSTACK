@@ -2,10 +2,22 @@ package com.the703.basic007_ex;
 
 public class For2Ex014 {
 	public static void main(String[] args) {
+		
+		int dan=0;
 	
-		for(int dan=2; dan<=9; dan+=3) {
-			for(int i=1; i<=9; i++) {
-				System.out.print( dan+"*"+i+"="+(dan*i)+"\t"+(dan+1)+"*"+i+"="+((dan+1)*i)+"\t"+( dan==8 ? "" : (dan+2)+"*"+i+"="+((dan+2)*i) )+"\n" );			
+		for(int i=1; i<=9; i++) {
+			if(dan%4==0) {										
+			for(int dan=2; dan<=9; dan++) {
+				System.out.print( dan+"*"+i+"="+(dan*i)+"\t");					
+					System.out.println();					
+					if(i%9==0) {
+						System.out.println();
+					}
+//				else {
+//					System.out.println();					
+//				}
+					
+			}
 			}
 			System.out.println();
 		}	

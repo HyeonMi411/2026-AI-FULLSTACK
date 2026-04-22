@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>이벤트 연습</title>
+  <style>
+    .result_target {
+      background-color: black;
+      color: white;
+      padding: 20px;
+      font-size: 20px;
+      text-align: center;
+      transition: all 0.3s ease; /* 부드러운 애니메이션 효과 */
+    }
+    .big {
+      font-size: 40px;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="card-body">
+    <h4>EX</h4>
+    <input type="button" value="이름 입력" id="test1" class="btn btn-success" />
+    <input type="button" value="버튼 글자 바꾸기" id="test2" class="btn btn-success" />
+    <input type="button" value="텍스트 수정" id="test3" class="btn btn-success" />
+    <input type="button" value="마우스 이벤트" id="test4" class="btn btn-success" />
+    <input type="button" value="크게/작게" id="test5" class="btn btn-success" />
+    <input type="button" value="숨기기/보이기" id="test6" class="btn btn-success" />
+    <div class="result_target my-5">JAVASCRIPT</div>
+  </div>
+
+  <script> 
+  window.addEventListener("load" , function(){
+
+    
+    // Q1: 이름 입력받아 알림창 띄우기
+    document.getElementById("test1").onclick = function(){
+      let name = prompt("이름 입력 > "); alert(name);
+    }; 
+
+    // Q2: 버튼 글자 바꾸기
+    
+    let   inner = document.querySelector("#test2");
+    inner.addEventListener("click" , function(){
+      let   inner_target = document.querySelector(".inner_target");
+      console.log(inner_target);
+      inner_target.innerHTML = "HELLO";    // 해당태그에 동적으로 값 넣기  A=B
+      alert(   inner_target.innerHTML  );  // alert 로 해당값 출력 
+    });    
+    
+    // Q3: result 영역 문자열 알림창 → 이름으로 수정
+
+    let   inner = document.querySelector("#inner");
+    inner.addEventListener("click" , function(){
+      let   inner_target = document.querySelector(".inner_target");
+      console.log(inner_target);
+        inner_target.innerHTML = "HELLO";    // 해당태그에 동적으로 값 넣기  A=B
+        alert(   inner_target.innerHTML  );  // alert 로 해당값 출력 
+      });    
+       
+      // Q4: 마우스 올리면/떼면 배경색 변경
+      
+        let inner1 = document.querySelector("#test4");
+        inner1.addEventListener.onmouseover = function(){
+          this.style.backgroundColor="crimson";
+        };     
+        
+        let inner2 = document.querySelector("#test4");
+        inner2.addEventListener.onmouseout = function(){
+          this.style.backgroundColor="black";
+        };   
+
+      // Q5: 글자 크게/작게 토글
+      
+      
+      // Q6: 숨기기/보이기 토글
+
+
+
+
+      
+    });
+    </script>
+    </body>
+    </html>
+    

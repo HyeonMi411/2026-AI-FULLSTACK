@@ -70,23 +70,23 @@ public class Bank_v3_김현미_2 {
 		balance[find] = scanner.nextDouble();		
 	}
 	
-	public static void bank_che() {
+	public static void bank_che(int find) {
 		System.out.printf("ID : %s\nPASS: %s\nBALANCE: %f\n", id[find], pass[find], balance[find]);
 	}
 	
-	public static void bank_dep() {
+	public static void bank_dep(int find) {
 		System.out.print("입금할 금액 > ");
 		balance[find] += scanner.nextInt();		
 	}
 	
-	public static void bank_wit() {
+	public static void bank_wit(int find) {
 		System.out.print("출금할 금액 > ");
 		int tempbalance = scanner.nextInt();
 		System.out.print(tempbalance > balance[find] ? "잔액부족! 출금불가"
 				: "출금완료! 현재잔액 : " + (balance[find] -= tempbalance));		
 	}
 	
-	public static void bank_del() {
+	public static void bank_del(int find) {
 		System.out.print("계좌삭제 (Y/N) > ");
 		char again = scanner.next().charAt(0);
 		if (again == 'Y' || again == 'y') {
@@ -131,7 +131,6 @@ public class Bank_v3_김현미_2 {
 
 			} else if (menu >= 2 && menu <= 5) { 
 				bank_aut();  //★
-//				continue;
 
 				if( find == -1 ) { System.out.println("아이디와 비밀번호를 확인해주세요."); continue;  }
 
@@ -139,13 +138,13 @@ public class Bank_v3_김현미_2 {
 
 				switch (menu) {
 				case 2:
-					bank_che();
+					bank_che(find);
 				case 3:
-					bank_dep();
+					bank_dep(find);
 				case 4:
-					bank_wit();
+					bank_wit(find);
 				case 5:
-					bank_del();
+					bank_del(find);
 				} // end switch				
 			} // end else if
 		} // end while
