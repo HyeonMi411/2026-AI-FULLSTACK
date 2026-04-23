@@ -45,10 +45,12 @@ public class ArrayEx014 {
 		for(int i=0; i<name.length; i++) {
 			stars[i] = avg[i]/10;	
 //			System.out.printf("%d\n" , stars[i]);					
-		}		
+		}	
+		
 		
 		for(int ch=0; ch<name.length; ch++) {
 			for(int i=0; i<stars[ch]; i++) {
+//				result[ch] = "";
 				result[ch]+="★";
 			}			
 //			System.out.println();				
