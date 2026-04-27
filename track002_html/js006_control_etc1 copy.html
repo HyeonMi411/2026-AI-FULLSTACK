@@ -567,40 +567,75 @@
           </p>
       </fieldset>
     </form>
-  <script>
-      window.addEventListener("load" , function(){
+    <script>
+      window.addEventListener("load" ,  function(){
         //1. 대상
-          let btn     = document.getElementById("calc"); //버튼
-          let targets = document.querySelectorAll("#calc_form  input"); 
-          console.log(targets); //#0  button //1: num1 , 2:abc, 3:num2, 4: result
-          let num1 = -1, num2=-1, op=' ', result=0;
+        let btn     = document.getElementById("calc"); //버튼
+        let targets = document.querySelectorAll("#calc_form input");
+        console.log(targets); //#0 button //1: num1 , 2:abc, 3:num2, 4: result
+        let num1=-1, num2=-1, op = ' ', result=0;
 
-          btn.addEventListener("click" , function(){
-            //2. 입력 (0~100사이 무한반복, 빈칸검사)
-            for(;;){  //초기값 num1 = -1, num2=-1, op=' '
-              if(   !(num1>=0  &&  num1<=100) | num1==""  ){ //0~100사이가 아니거나  빈문자열
-                 num1 = prompt("1. 정수입력 0~100"); // 50
-              }else if(!(num2>=0  &&  num2<=100) | num2==""){
-                 num2 = prompt("2. 정수입력 0~100"); //3
-              }else if( !(op == '+' || op == '-' || op == '*' || op == '/') ){
-                 op = prompt("3. 연산자입력 (+,-,*,/)");  //+
-              }else{ break;}
-            }
-            //3. 처리
-            switch(op){
-              case '+' : result = Number(num1) + Number(num2); break;
-              case '-' : result = Number(num1) - Number(num2); break;
-              case '*' : result = Number(num1) * Number(num2); break;
-              case '/' : result = Number(num1) / Number(num2); break;
-            }
-            //4. 각 value 각각 셋팅
-            targets[1].value = num1;
-            targets[2].value = op;
-            targets[3].value = num2;
-            targets[4].value = op!='/'? result: result.toFixed(2); //소수점 2
-            
-          });
+        btn.addEventListener("click" , function(){
+          //2. 입력 (0~100사이 무한반복, 빈킨검사)
+          for(;;){    //초기값 num1 = -1, num2=-1, op=' '
+            if(   !(num1>=0 && num1<=100) | num1==""  ){ //0~100사이가 아니거나 빈문자열
+              num1 = prompt("1. 정수입력 0~100"); //50
+            }else if(!(num2>=0 && num2<=100) | num2==""){
+              num2 = prompt("2. 정수입력 0~100"); //3
+            }else if( !(op == '+' || op == '-' || op == '*' || op == '/') ){
+              op = prompt("3. 연산자입력 (+,-,*,/)");  //+
+            }else{ break;}
+          }
+          //3. 처리
+          switch(op){
+            case '+' : result = Number(num1) + Number(num2); break;
+            case '-' : result = Number(num1) - Number(num2); break;
+            case '*' : result = Number(num1) * Number(num2); break;
+            case '/' : result = Number(num1) / Number(num2); break;
+          }
+          //4. 각 value 각각 셋팅
+          targets[1].value = num1;
+          targets[2].value = op;
+          targets[3].value = num2;
+          targets[4].value = op !='/'? result: result.toFixed(2); //소수점 2
+        });
       });
+      // opfn();
+      // function opfn(){
+      //   let result1 = 0;
+
+      //   /*
+      //   let blank="null";
+
+      //   if(blank==null){
+      //     document.getElementById("num1");
+      //     document.getElementById("abc");
+      //     document.getElementById("num2");
+      //     document.getElementById("result1");
+      //   }
+      //   */
+  
+      //     for(;;){
+      //       let num11 = prompt("숫자1 입력 > "); num1=num11;
+      //       let num22 = prompt("숫자2 입력 > "); num2=num22;
+      //       if(num1>=0 && num1<=100 && num2>=0 && num2<=100){ 
+      //         break;  
+      //       }
+      //       else{ alert("0~100 사이의 숫자를 입력하세요"); }
+      //     }
+      //     for(;;){
+      //       let abc = prompt("연산자 입력 > ");
+      //       if(abc=='+' || abc=='-' || abc=='*' || abc=='/'){ break;  }
+      //       else{ alert("+,-,*,/를 입력하세요"); }
+      //     }
+      //     switch(abc){
+      //       case '+' : rewult1 = num1+num2;
+      //       case '-' : rewult1 = num1-num2;
+      //       case '*' : rewult1 = num1*num2;
+      //       case '/' : rewult1 = num1/num2;
+      //     }
+      //     alert(result1);
+      // }
     </script>
 </div> <!-- end contianer  -->
 
