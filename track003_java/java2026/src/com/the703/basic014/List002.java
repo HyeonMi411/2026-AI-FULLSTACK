@@ -51,7 +51,7 @@ public class List002 {
       List<UserDto>  users = new ArrayList<>();
       
       users.add(  new UserDto("aaa@gmail.com")     );   // 주소값
-      users.add(  new UserDto("bbb@gmail.com")     );
+      users.add(  new UserDto("b+bb@gmail.com")     );
       
       System.out.println(users);
       System.out.println("1. get  > " + users.get(0));
