@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+.myhidden{
+    position:absolute;  left:-9999px;   width: 1px; height: 1px;    overflow: hidden;
+    border: 0;  white-space: nowrap;    
+    clip: rect(0,0,0,0);    /*  요소를 잘라서 시각적으로 완전히 숨김 - 구혀우라우저 호환 */
+}
+
+#demo{  height: 300px;  overflow: hidden;  }
+
+
+/*  배경 body fixed 하고 원하는 배경부분만 투명하게 */
+.mybg{  background-color: transparent;}
+body{   
+    background-image: url(../img/arduinna-fall-8192375.png);
+    background-repeat: no-repeat;        
+    background-position: bottom;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/* transform + transition */
+h3{     transition: all 0.3s;   }
+h3:hover{   transform: translateY(-10px);   }

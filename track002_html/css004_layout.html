@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>004. layout </title>
+    <style>
+        * { margin : 0; padding: 0; }
+        body{   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                background-image: linear-gradient(135deg, #f4ffb8, #8affd0);    
+        }
+        h3{ border-left: 10px solid#123456;
+            border-bottom: 1px solid #123456;
+            margin: 30px 0; padding-left: 20px;
+        }
+        .container{ width: 50%; margin: 50px auto;  border-radius: 10px;
+                    background-color: #fff; padding: 20px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);}
+
+        .item { background-color: #333; color:white; padding: 10px; }              
+        .f1{float:left;  background-color: #3afea3;}
+        .f2{float:right; background-color: #ffb8f1;}
+        .f3{clear:both}
+
+
+        .p{ position:relative; }
+        .me{ position:absolute; bottom: 0; right: 10px}
+
+        div.di p.item { background-color: green; text-align: center; }
+        div.di p.item a { color: white; display: block; background-color: red; }
+        /* a(인라인)    display:block - 인라인을 블록 */
+        div.di p.item a:last-child { display: none; }                    
+        /* display: none 화면상에 안보이게 숨기기 (h태그에서 주의) */
+
+        .d1{ background-color: blueviolet; text-align: center; margin: 10px 0; padding: 10px; }
+        .d1 li{ background-color: #f4ffb8; display: inline; width: 100px; } 
+        /* display:inline 블록을 인라인으로 - 한줄로 배치 */
+
+        .d2{ background-color: #ffb8f1; text-align: center; margin: 10px 0; padding: 10px; }
+        .d2 li{ background-color: #f4ffb8; display: inline-block; width: 100px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3>1. block vs inline </h3>
+        <dl>
+            <dt>block</dt>
+            <dd> width O , 줄바꿈 O </dd>
+            <dt>inline</dt>
+            <dd> width x , 줄바꿈 x </dd>
+        </dl>
+    </div>
+
+    <div class="container">
+        <h3>2. 배치</h3>
+        <ul>
+            <li>float : 왼쪽이나 오른쪽에 옆에 붙이기 (끊기-clear:both)</li>
+            <li>position : 정확한 자리를 정해서 붙이기(좌표)</li>
+            <li>display : 블록에 줄서기 ,속성바꾸기</li>
+        </ul>
+    </div>
+
+    <div class="container f">
+        <h3>3. 배치(1) - float</h3>
+        <P class="item f1" >LEFT<span>(왼쪽)</span></P>
+        <p class="item f2" >RIGHT<span>(오른쪽)</span></p>
+        <P class="item f3" >float속성끊기-clear:both / overflow:hidden </P>
+    </div>
+
+    <div class="container p">
+        <h3>4. 배치(2) - position- relative(누구안에) + absolute(어디) 좌표</h3>
+        <p class="item me">WHERE I AM</p>
+        <p>종류 : static(기본값) , relative(박스 위치o) , 
+            absolute(박스 위치x) , fixed(브라우저고정) , 
+            sticky(스크롤할때 특점지정에 붙기)
+        </p>
+        <p>부모 : relaive(공간확보) / 자식 : (원하는 위치 배치) - 좌표</p>
+    </div>
+
+    <div class="container di">
+        <h3>5. 배치(3) - display</h3>
+        <p>속성바꾸기 : display:block, inline, inline-block, none </p>
+        <p>배치 - 박스들이 어떻게 놓일지 정하는 규칙(정리 도우미) display:flex </p>
+        <p class="item">
+            <a href="http://www.naver.com">NAVER</a>    <!-- display:block [box]로 만들어서 (링크확대) -->
+            <a href="http://www.daum.com">DAUM</a>  <!-- display:none [숨기기] -->
+        </p>
+        <!-- display:inline [콘텐츠] -->
+        <ul class="d1"> <li>APPLE</li>  <li>BANANA</li>  <li>COCONUT</li> </ul>
+        <!-- display:inline-block [콘텐츠-width 0] -->
+        <ul class="d2"> <li>APPLE</li>  <li>BANANA</li>  <li>COCONUT</li> </ul>
+    </div>
+
+
+    
+</body>
+</html>
+
+<!-- css004_layout.html  -->
