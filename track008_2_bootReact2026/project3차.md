@@ -43,43 +43,29 @@ DAY1~5. 260727~31
 
 
 DAY6~10. 260803~
-■1)  @Entity                               > 260803
+DAY11~15. 260810~
+> (비NCS)프로젝트ⅡBtoC 웹서비스 구축(Spring Framework 활용)
+> boot + security + jwt + redis / jpa( mybatis ) +oracle / react + next 
+> 포트폴리오 가이드 참고 해서 작업 시작
+      ■1)  @Entity
+      ■2)  @Repository  / @Mapper
+      ..................기존의 dto / @Mapper 동작하는지확인
+      ..................@Entity 연결되는지
+■3)  Dto( RequestDto + ResponseDto )  흐름도 / @Service 
+■4)  @RestController - backend 리팩토링
+■5)  react
 
 
 
 
-
-■2)  @Repository  / @Mapper                > 260804
-..................기존의 dto / @Mapper 동작하는지확인
-..................@Entity 연결되는지
-
-
-
-
-
-■3)  Dto( RequestDto + ResponseDto )  흐름도 / @Service + @RestController  > 260805
-          @Service     +  @RestController       > 260805
-
-
-
-          
-■4)  backend 리팩토링
-
-
-■ 과정명   : [취업기업확대]AI활용 풀스택(프로트엔드,백엔드)부트캠프(자바,파이썬,플러터)
-■ 훈련과목 : (비NCS)프로젝트2BtoC 웹서비스 구축(Spring Framework 활용)
-> boot + security + jwt + redis / jpa( mybatis ) +oracle / react + next     → aws 
 
 주제 → CRUD → ERD  → 피그마 → 코드구현
-
 1. 2차 포트폴리오 3차로 리팩토링
-□1)  @Entity
-□2)  @Repository  / @Mapper
-□3)  Dto( RequestDto + ResponseDto )  흐름도 / @Service + @RestController
-□4)  backend 리팩토링
-□5)  react
 
 2. 3차 새로운 기능추가 및 점검
+
+
+
 
 
 
@@ -88,6 +74,19 @@ DAY6~10. 260803~
 ■ 포트폴리오
 1. 서로존중하기 - 금기어 : 고소, 경찰서  >  아이스크림....쏴요 ㅎㅎ
 2. 각자 당 : 10~15분씩
+
+
+
+
+■ 과정명   : [취업기업확대]AI활용 풀스택(프론트엔드,백엔드)부트캠프(자바,파이썬,플러터)
+■ 훈련과목 : (비NCS)프로젝트ⅡBtoC 웹서비스 구축(Spring Framework 활용)
+> boot + security + jwt + redis / jpa( mybatis ) +oracle / react + next 
+
+■1)  @Entity                               > 260803
+■2)  @Repository  / @Mapper                > 260804
+■3)  Dto( RequestDto + ResponseDto )  흐름도 / @Service + @RestController  > 260805
+          @Service     +  @RestController       > 260805          
+■4)  backend 리팩토링
 
 
 
