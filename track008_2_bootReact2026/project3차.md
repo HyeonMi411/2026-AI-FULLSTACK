@@ -33,6 +33,7 @@
 - backend : jpa + @entity  
 2. react
 
+
 ※ 포트폴리오 - 3차  - 20260728
 DAY1~5. 260727~31
       주제회의 / 각 파트기능 점검 및 내용들 확인 ( 아이디어 및 내용 추가 )
@@ -40,7 +41,6 @@ DAY1~5. 260727~31
       ( 스프링4STS,  DOCKER, REDIS )
       ★ 회의내용 : 구글시트점검  
       ★ 셋팅점검
-
 
 DAY6~10. 260803~
 DAY11~15. 260810~
@@ -53,6 +53,8 @@ DAY11~15. 260810~
       ..................@Entity 연결되는지
 ■3)  Dto( RequestDto + ResponseDto )  흐름도 / @Service 
 ■4)  @RestController - backend 리팩토링
+
+
 ■5)  react
 
 
