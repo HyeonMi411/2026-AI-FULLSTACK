@@ -33,7 +33,6 @@
 - backend : jpa + @entity  
 2. react
 
-
 ※ 포트폴리오 - 3차  - 20260728
 DAY1~5. 260727~31
       주제회의 / 각 파트기능 점검 및 내용들 확인 ( 아이디어 및 내용 추가 )
@@ -44,25 +43,31 @@ DAY1~5. 260727~31
 
 DAY6~10. 260803~
 DAY11~15. 260810~
-> (비NCS)프로젝트ⅡBtoC 웹서비스 구축(Spring Framework 활용)
-> boot + security + jwt + redis / jpa( mybatis ) +oracle / react + next 
+■ 과정명   : [취업기업확대]AI활용 풀스택(프론트엔드,백엔드)부트캠프(자바,파이썬,플러터)
+■ 훈련과목 : (비NCS)프로젝트ⅡBtoC 웹서비스 구축(Spring Framework 활용)
 > 포트폴리오 가이드 참고 해서 작업 시작
       ■1)  @Entity
       ■2)  @Repository  / @Mapper
       ..................기존의 dto / @Mapper 동작하는지확인
       ..................@Entity 연결되는지
-■3)  Dto( RequestDto + ResponseDto )  흐름도 / @Service 
-■4)  @RestController - backend 리팩토링
+      ■3)  Dto( RequestDto + ResponseDto )  흐름도 / @Service 
+      ■4)  @RestController - backend 리팩토링
+      ■5)  react
 
 
-■5)  react
 
 
+
+
+
+> Bankend
+> boot + security + jwt + redis / jpa( mybatis ) +oracle / react + next 
 
 
 
 주제 → CRUD → ERD  → 피그마 → 코드구현
-1. 2차 포트폴리오 3차로 리팩토링
+
+1. 2차 포트폴리오 3차로 리팩토링 
 
 2. 3차 새로운 기능추가 및 점검
 
