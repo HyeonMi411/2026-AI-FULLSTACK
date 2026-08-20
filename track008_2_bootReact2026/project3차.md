@@ -45,23 +45,28 @@ DAY6~10. 260803~
 DAY11~15. 260810~
 ■ 과정명   : [취업기업확대]AI활용 풀스택(프론트엔드,백엔드)부트캠프(자바,파이썬,플러터)
 ■ 훈련과목 : (비NCS)프로젝트ⅡBtoC 웹서비스 구축(Spring Framework 활용)
-> 포트폴리오 가이드 참고 해서 작업 시작
-      ■1)  @Entity
-      ■2)  @Repository  / @Mapper
-      ..................기존의 dto / @Mapper 동작하는지확인
-      ..................@Entity 연결되는지
-      ■3)  Dto( RequestDto + ResponseDto )  흐름도 / @Service 
-      ■4)  @RestController - backend 리팩토링
-      ■5)  react
+
+>Part1. 포트폴리오 가이드 참고 해서 작업 시작 (2차 리팩토링완성)
+
+
+
+
+
+>Part2. 3차 고도화 및 확장 AI 및 기술 집중 컨셉
 
 
 
 
 
 
+> boot + security + jwt + redis / jpa( mybatis ) +oracle / react
 
-> Bankend
-> boot + security + jwt + redis / jpa( mybatis ) +oracle / react + next 
+1. redis  (  docker 키기 )
+	docker exec  -it  my-redis  redis-cli
+	docker exec  -it  my-redis  redis-cli  FLUSHALL
+
+
+
 
 
 
@@ -95,5 +100,12 @@ DAY11~15. 260810~
           @Service     +  @RestController       > 260805          
 ■4)  backend 리팩토링
 
+      ■1)  @Entity
+      ■2)  @Repository  / @Mapper
+      ..................기존의 dto / @Mapper 동작하는지확인
+      ..................@Entity 연결되는지
+      ■3)  Dto( RequestDto + ResponseDto )  흐름도 / @Service 
+      ■4)  @RestController - backend 리팩토링
+      ■5)  react
 
-
+> Bankend
