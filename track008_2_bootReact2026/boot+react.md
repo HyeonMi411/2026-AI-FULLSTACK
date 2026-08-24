@@ -654,7 +654,7 @@ STEP3)
    HMACSHA256(base64UrlEncode(header) + "." + base64UrlEncode(payload), secret)
 ```
 
-■ 과정명   : [취업기업확대]AI활용 풀스택(프로트엔드,백엔드)부트캠프(자바,파이썬,플러터)
+■ 과정명   : [취업기업확대]AI활용 풀스택(프로트엔드,백엔드)부트캠프(자바,파이썬,플러터) 
 ■ 훈련과목 : (비NCS)프로젝트2BtoC 웹서비스 구축(Spring Framework 활용)
 > boot + security + jwt + redis / jpa( mybatis ) +oracle / react + next     → aws 
 
