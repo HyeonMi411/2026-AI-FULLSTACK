@@ -101,6 +101,23 @@ DAY11~15. 260810~
 
 
 
+
+> 1. 포폴마무리
+
+
+
+
+
+> 2. 오후에 취업세미나 
+
+
+
+
+
+
+
+
+
 ■ 과정명   : [취업기업확대]AI활용 풀스택(프론트엔드,백엔드)부트캠프(자바,파이썬,플러터)
 ■ 훈련과목 : (비NCS)프로젝트ⅡBtoC 웹서비스 구축(Spring Framework 활용)
 > boot + security + jwt + redis / jpa( mybatis ) +oracle / react + next 
