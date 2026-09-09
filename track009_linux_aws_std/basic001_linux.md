@@ -420,8 +420,7 @@ chmod +x  date_log.sh
 
 
 
-## Part002. Aws
-■ 0. 회워가입 / 로그인
+
 
 
 1) 이력서- 사진
