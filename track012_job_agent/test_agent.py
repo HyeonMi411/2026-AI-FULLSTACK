@@ -15,10 +15,14 @@ def check(name, got, expected):
 
 
 print("── 경력 조건 ──")
+agent.CAREER_UNKNOWN_OK = False
 for text, exp in [("신입", True), ("신입·경력", True), ("경력무관", True), ("경력 3년↑", True),
                   ("경력 5년↑", False), ("경력 2~5년", True), ("경력 4~7년", False), ("경력 5년↓", True),
                   ("경력 10년", False), ("학력무관 정규직", False)]:
     check(text, agent.career_ok(text), exp)
+
+agent.CAREER_UNKNOWN_OK = True
+check("경력 표기 없음 → 지원(설정 True)", agent.career_ok("학력무관 정규직"), True)
 
 print("── 제외 / 점수 ──")
 check("파견 제외", agent.has_excluded_word("[파견] 백엔드"), True)

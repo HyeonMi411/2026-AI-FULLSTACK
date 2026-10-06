@@ -1,5 +1,7 @@
 # 로그인 세션 쿠키 - 절대 커밋 금지
 state.json
 applied_log.csv
+추천목록_*.xlsx
+지원결과_*.xlsx
 debug/
 __pycache__/
