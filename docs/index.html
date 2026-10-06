@@ -227,6 +227,11 @@ footer{ text-align:center; padding:0.9rem; background: var(--chat-bg); color:#5a
               </div>
               <div class="hl-card">
                 <span class="hl-tag">HL 04</span>
+                <div class="hl-title">웹 → 모바일 앱 전환</div>
+                <div class="hl-desc">앱은 쿠키를 자동 저장하지 않는 차이를 찾아 토큰 저장·자동 재발급으로 로그인 유지를 해결했습니다.</div>
+              </div>
+              <div class="hl-card">
+                <span class="hl-tag">HL 05</span>
                 <div class="hl-title">CI/CD 자동배포</div>
                 <div class="hl-desc">GitHub Actions로 EC2 배포, nginx·SSL까지 전 과정을 직접 구축했습니다.</div>
               </div>
@@ -304,7 +309,7 @@ footer{ text-align:center; padding:0.9rem; background: var(--chat-bg); color:#5a
           <ul>
             <li>OAuth2 소셜로그인 도입, 세션 기반(v1) 대비 인증 흐름 전면 개편</li>
             <li>Spring Boot 자동설정 전환, XML 대비 개발 생산성 비교 체득</li>
-            <li>PDF 기반 RAG 챗봇 기능을 구현했지만, 이 버전에서는 실제 사용까지 이어가지 못함</li>
+            <li>PDFBox + OpenAI GPT 기반 RAG 챗봇을 처음 설계·구현 (v3에서 REST API화·비용 상한으로 고도화)</li>
           </ul>
           <div class="msg-links">
             <a href="https://github.com/HyeonMi411/THEBOOK/tree/main/project_2" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a>
@@ -322,7 +327,7 @@ footer{ text-align:center; padding:0.9rem; background: var(--chat-bg); color:#5a
       <div class="bubble-wrap">
         <div class="typing-indicator"><span></span><span></span><span></span></div>
         <div class="bubble wide proj-card-msg">
-          <span class="proj-tag live">● LIVE 배포중</span>
+          <span class="proj-tag live">● LIVE</span>
           <h4>REST API + JWT + Next.js</h4>
           <div class="period">2026.08.12 – 08.28</div>
           <div class="video-pair">
@@ -339,7 +344,7 @@ footer{ text-align:center; padding:0.9rem; background: var(--chat-bg); color:#5a
           </div>
           <ul>
             <li>OAuth2 소셜로그인 + JWT 무상태 인증으로 백엔드/프론트 완전 분리, 카카오페이 3단계 결제 실연동</li>
-            <li>v2에서 구현만 해뒀던 PDF 기반 RAG 챗봇을 이 버전부터 실제로 사용 시작, 토큰 비용 상한 제어</li>
+            <li>v2의 PDF 기반 RAG 챗봇을 REST API로 재설계, 컨텍스트·응답 토큰 상한으로 비용 제어</li>
             <li>결제 승인 시점 재고 동시 차감 → 비관적+낙관적 락 이중 적용으로 해결</li>
             <li>JPA 1차 캐시·MyBatis(raw SQL) 데이터 불일치, FK 제약 위반 실제 트러블슈팅</li>
             <li>GitHub Actions로 EC2 자동배포, nginx 라우팅까지 직접 구성</li>
@@ -353,24 +358,26 @@ footer{ text-align:center; padding:0.9rem; background: var(--chat-bg); color:#5a
       </div>
     </div>
 
-    <div class="date-divider" data-msg-instant><span>v4 · Flutter + 통계 대시보드</span></div>
+    <div class="date-divider" data-msg-instant><span>v4 · Flutter 앱 + 운영 대시보드</span></div>
 
     <div class="msg-row" data-msg>
       <div class="m-avatar"><img src="./img/profile.jpg" alt=""></div>
       <div class="bubble-wrap">
         <div class="typing-indicator"><span></span><span></span><span></span></div>
         <div class="bubble proj-card-msg">
-          <span class="proj-tag">IN PROGRESS</span>
-          <h4>Flutter + 통계 대시보드</h4>
-          <div class="period">진행중</div>
+          <span class="proj-tag">LOCAL</span>
+          <h4>Flutter 앱 + Django 운영 대시보드</h4>
+          <div class="period">2026.09.11 – 09.23</div>
           <ul>
-            <li>v3 백엔드를 그대로 재사용, 클라이언트만 Flutter 모바일 앱으로 재구성</li>
-            <li>OAuth2 소셜로그인은 v3에 이어 계속 사용 예정</li>
-            <li>SNS 게시판·Django 판매 통계 대시보드 신규 추가</li>
+            <li>v3 웹 쇼핑몰을 Flutter 모바일 앱으로 재설계 (Riverpod 3 · Dio, 카카오페이 결제, 소셜 로그인 딥링크)</li>
+            <li>SNS 커뮤니티: 해시태그 · 좋아요 · 댓글 · 리트윗 · 팔로잉 피드</li>
+            <li>앱에서 15분마다 로그인이 풀리던 문제 → 토큰 저장 + 인터셉터 자동 재발급으로 해결</li>
+            <li>외부 API 장애 대응: 기상청 실패 시 Open-Meteo 대체, 한글 인코딩 오류 수정</li>
+            <li>Spring Boot ↔ Django 연동 운영 대시보드 (판매 · 커뮤니티 · 챗봇 · 운영 지표)</li>
           </ul>
           <div class="msg-links">
             <a href="https://github.com/HyeonMi411/THEBOOK/tree/main/project_4" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a>
-            <span class="na">배포 후 업데이트 예정</span>
+            <a href="https://www.youtube.com/watch?v=pUG-v9Hbqv8" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i> 영상 1</a><a href="https://www.youtube.com/watch?v=EuUjMA2sNWk" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i> 영상 2</a>
           </div>
         </div>
         <div class="timestamp">오전 10:29</div>
